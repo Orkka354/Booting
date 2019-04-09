@@ -33,17 +33,16 @@ coolbox{
 }
 
 bio{
+	display: block;
+	width: 800px;
+	margin: auto;
 	
-	
-	position: relative;
 
 
 	
 	padding-top: 10px;
 	
 	
-	display: flex;
-	flex-direction: column;
 	
 	
 	
@@ -52,6 +51,18 @@ bio{
 	
 	
 	
+}
+.iconss{
+	position: inherit;
+	
+	display: block;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
 }
 .smallman{
 	position: inherit;
@@ -64,7 +75,46 @@ bio{
 	width: 10%;
 	height: 1%;
 	border-radius: 100%;
+	animation-name: reverseing;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	
+	
 }
+.smallman:hover{
+	animation-name: rotating;
+	animation-duration: 1s;
+	
+	animation-fill-mode: forwards;
+	
+}
+@keyframes rotating{
+	0%{
+transform: rotate(0deg);
+		width: 10%;
+		height:10%;
+		
+	}
+	100%{
+	transform: rotate(360deg);
+		width: 50%;
+		height: 50%;
+}
+}
+@keyframes reverseing{
+	0%{
+		transform: rotate(360deg);
+		width: 50%;
+		height: 50%;
+	}
+	100%{
+		transform: rotate(0deg);
+			width: 10%;
+		height: 10%;
+	}
+}
+
+
 welcome{
     
     float: inherit;
@@ -83,31 +133,98 @@ welcome{
 	
 	
 }
-games{
-	position: inherit;
-	width: 100px;
-	height: 500px;
-	background-color: red;
-	color: red;
-	padding: 10px;
-	margin: 50%;
-}
-biopage{
-	position:absolute;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	width: 600px;
-	height: 600px;
+game{
+	display:grid;
+	grid-template-columns: 230px 230px 230px;
+	grid-column-gap: 100px;
 	
-	background-color: lightblue;
-	word-wrap: break-word;
-	margin-top: 50px;
-	margin-left: 50px;
+	position: relative;
+	
+	
+
+	
+	margin: auto;
+	width:980px;
+	padding-top:100px;
+}
+gameimages{
+	display: grid;
+	grid-template-columns: 230px 230px 230px;
+	grid-column-gap: 250px;
+	width: 900px;
+	margin: auto;
+	height: 500px;
+	padding-top: 100px;
+	
+}
+
+.gamesmol{
+	
+	height:100%;
+	border-radius: 100%;
+}
+.gamesmol:hover{
+	animation-name: scaling;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	
+}
+@keyframes scaling{
+	0%{
+		
+	}
+	20%{
+		transform: rotate(35deg);
+		
+		
+		margin-bottom: 100px;
+		margin-left: 100px;
+	}
+	40%{
+		transform: rotate(-35deg);
+		margin-bottom: -100px;
+		margin-left: -100px;
+	}
+	60%{
+		transform: rotate(35deg);
+		margin-bottom: 100px;
+		margin-left: 100px;
+	}
+	80%{
+		transform: rotate(-35deg);
+		margin-bottom: -100px;
+		margin-left: -100px;
+	}
+	100%{
+		transform: rotate(0deg);
+		margin-bottom: 0px;
+		margin-left: 0px;
+	}
+}
+
+biopage{
+	display: block;
+	width: 800px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	
+	height: 800px;
+	
+	background-color: white;
+	word-wrap:normal;
+	
 	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 	font-size: 200%;
 	
 	text-align: center;
 	color:black;
-		
+		margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	border-radius: 100%;
+	padding-top: 200px;
+	padding-left: 40px;
+		padding-right: 40px;
 		
 }
 inside{
@@ -128,4 +245,18 @@ inside{
 	text-align: center;
 	color:black;
 	padding-top: 105px;
+}
+controls{
+	width: 50%;
+	height: 50%;
+}
+.controlsize{
+	display: block;
+	
+	width:40%;
+	margin: auto;
+	height:70%;
+}
+.navbar{
+	color: aquamarine;
 }
